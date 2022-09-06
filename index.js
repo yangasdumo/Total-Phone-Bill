@@ -4,7 +4,8 @@ const session = require('express-session');
 const exphbs = require("express-handlebars");
 const bodyParser = require('body-parser');
 const reggie = require('./');
-const Routee = require('./')
+const Routee = require('./');
+const { redirect } = require('express/lib/response');
 
 const app = express();
 app.use(flash());
@@ -44,7 +45,13 @@ app.use(bodyParser.json());
 const db = pgp(config)
 
 // STart your routes here
+app.get("/",function(req,res){
+  res.render("index")
+});
 
+app.get("/sdumo",function(req,res){
+res,redirect("/")
+});
 
 const PORT = process.env.PORT || 2000;
 
