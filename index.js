@@ -46,9 +46,9 @@ const db = pgp(config)
 const names =  prices(db)
 
 
-
 // STart your routes here
 app.get("/",names.home)
+
 
 app.post("/totalBill",function(req,res){
    
