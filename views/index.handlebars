@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    
+    <div class="main-container">
+
+        <h1 class="Headings">Phone Bill Widget</h1>
+
+        <form action="/totalBill" method="POST">
+            <h1 class="Main-heads"> Price Plans </h1>
+
+            <div class="price-list">
+                <div class="input-box">
+
+                    <h1>User Name <input name="nameEntered" type="text" id="input" class="inputname"></input>
+
+                    </h1>
+                    <h1>User String <input name="nameEntered" type="text" id="input" class="inputname"></input>
+
+                    </h1>
+                    <button class="btns" on type="submit" name="button">Calculate Total Phone bill</button>
+
+                    <h1>Bill Total <input name="nameEntered" type="text" id="input" class="inputname"></input>
+                    </h1>
+
+                </div>
+                <br>
+                <br>
+            </div>
+    </div>
+    <br>
+    </form>
+    <div class="topnav">
+                <a class="active" href="/">Home</a>
+                <a href="/pricePlan">Price-plan</a>
+    </div>
 </body>
+
 </html>

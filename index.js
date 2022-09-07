@@ -14,7 +14,7 @@ app.use(flash());
 //database
 const pgp = require('pg-promise')({});
 
-const local_database_url = 'postgres://postgres:codex123@localhost:5432/';
+const local_database_url = 'postgres://codex:codex123@localhost:5432/sdumo';
 const connectionString = process.env.DATABASE_URL || local_database_url;
 
 const config = {
@@ -49,7 +49,7 @@ app.get("/",function(req,res){
   res.render("index")
 });
 
-app.get("/sdumo",function(req,res){
+app.get("/totalBill",function(req,res){
 res,redirect("/")
 });
 
