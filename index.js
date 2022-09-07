@@ -3,8 +3,8 @@ const flash = require('express-flash');
 const session = require('express-session');
 const exphbs = require("express-handlebars");
 const bodyParser = require('body-parser');
-const reggie = require('./');
-const Routee = require('./');
+const prices = require('./price_plans');
+
 
 
 const app = express();
@@ -43,13 +43,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const db = pgp(config)
+const names =  prices(db)
+
+
 
 // STart your routes here
-app.get("/",function(req,res){
-  res.render("index")
-});
+app.get("/",names.home)
 
-app.get("/totalBill",function(req,res){
+app.post("/totalBill",function(req,res){
+   
 res,redirect("/")
 });
 
