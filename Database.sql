@@ -1,24 +1,18 @@
-CREATE TABLE users(
-id SERIAL PRIMARY KEY,
-list_prices text NOT NULL,
-users_name text NOT NULL
-)
-
-insert into price_plan (name_price ,users_name) values (
-    'SMS 100','sdumo');
-insert into price_plan (name_price,users_name) values (
-    'Call 50','Lee');
-insert into price_plan (name_price,users_name) values (
-    'call weekly','Zee');
-
 CREATE TABLE price_plan(
 id SERIAL PRIMARY KEY,
-name_price text NOT NULL,
-users_name text NOT NULL,
-foreign key (users_name) references users(users_name)
+name varchar(255) not null
+name_price into NOT NULL,
+users_name into NOT NULL,
+)
+
+CREATE TABLE users(
+id SERIAL PRIMARY KEY,
+name varchar(255) not null
+theName varchar(255) not null
+users_name into NOT NULL
 )
 
 
-  
- 
+
+
 

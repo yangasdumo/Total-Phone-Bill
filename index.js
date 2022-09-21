@@ -50,12 +50,11 @@ const names =  prices(db)
 app.get("/",names.home)
 
 
-app.post("/totalBill",function(req,res){
-   
+app.post("/totalBill",function(req,res){  
 res,redirect("/")
 });
 
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 4050;
 
 app.listen(PORT, function () {
   console.log('App starting on port', PORT);

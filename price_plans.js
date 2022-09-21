@@ -1,14 +1,12 @@
 module.exports = function Phonebill(){
 
 
-    async function PricePlan() {
-        var  user = await db.any("SELECT list_price FROM users");
+    async function PricePlan(name){
+        var  user = await db.OneOrNone("INSERT list_price FROM users(name) value($)",[name]);
         return user
     }
     
-   
 
-    
  return{
     PricePlan
 }
